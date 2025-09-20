@@ -1,0 +1,16 @@
+/* Reuse your existing “pill” class or keep this quick version */
+.pill {
+    @apply px-3 py-1 rounded-full text-[13px] bg-white ring-1 ring-black/10 text-gray-800;
+  }
+  
+  /* Optional note style reuse */
+  .section-sub {
+    @apply text-[18px] md:text-[20px] font-semibold text-gray-900;
+  }
+  
+  /* Full-bleed helper (works with your other pages) */
+  .bleed {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  

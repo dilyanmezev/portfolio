@@ -1,0 +1,138 @@
+<!-- HERO (full viewport, balanced spacing) -->
+<section class="relative min-h-[calc(100dvh-80px)] mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-12">
+    <div class="grid md:grid-cols-12 h-full items-center gap-8 md:gap-12 lg:gap-16">
+        <!-- TEXT -->
+        <div class="md:col-span-7 md:pr-10 lg:pr-12" revealDepth>
+            <h1 class="text-3xl md:text-5xl font-medium leading-[1.12]">
+                About <span class="gradient-text font-medium">me</span>
+            </h1>
+            <p class="mt-3 md:mt-4 text-[16px] md:text-[18px] text-gray-700 leading-[1.65] max-w-[62ch]">
+                I’m <span class="gradient-text font-medium">Dilyan Mezev</span> — Product Designer & Front-end Developer
+                from Bulgaria.
+                I design calm, human experiences and make them real in code. I enjoy clear structure, accessible
+                visuals, and fast feedback loops.
+            </p>
+
+            <ul class="mt-5 flex flex-wrap gap-2">
+                <li *ngFor="let b of badges" class="pill">{{ b }}</li>
+            </ul>
+
+            <a href="#info" (click)="scrollTo('info', $event)"
+                class="hidden md:inline-flex mt-4 items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent2 text-white shadow-md hover:opacity-95 transition">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- IMAGE -->
+        <figure class="md:col-span-5 md:justify-self-end self-center" revealDepth [revealDelay]="80">
+            <div
+                class="relative w-full max-w-[300px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[420px] aspect-[4/5] mx-auto">
+                <img src="assets/About/main.jpeg" alt="Portrait of Dilyan"
+                    class="rounded-2xl w-full h-full object-cover shadow-xl" loading="lazy" />
+            </div>
+        </figure>
+    </div>
+</section>
+
+<!-- QUICK STATS -->
+<section id="info" class="mx-auto max-w-[1080px] px-6 md:px-10 scroll-mt-[80px]">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div *ngFor="let s of stats" class="rounded-xl bg-white ring-1 ring-black/10 p-4 md:p-5 text-center"
+            revealDepth>
+            <div class="text-2xl md:text-3xl font-semibold">{{ s.value }}</div>
+            <div class="mt-1 text-sm text-gray-600">{{ s.label }}</div>
+        </div>
+    </div>
+</section>
+
+<!-- STORY -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7" revealDepth>
+            <h2 class="text-[30px] md:text-[42px] font-semibold leading-tight">My approach</h2>
+            <p class="mt-4 text-[18px] md:text-[19px] text-gray-700 leading-[1.85]">
+                Research first, then ruthless prioritization. I validate flows with low-fi wireframes,
+                evolve them to mid-fi for structure, and finish with high-fi components I can ship.
+                I bias toward clarity: one primary action per screen, accessible type & color, and motion
+                that explains—not decorates.
+            </p>
+            <div class="mt-6">
+                <h3 class="section-sub">Tools I reach for:</h3>
+                <ul class="mt-3 flex flex-wrap gap-2">
+                    <li *ngFor="let t of tools" class="pill">{{ t }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="md:col-span-5" revealDepth [revealDelay]="120">
+            <h3 class="section-sub">Timeline</h3>
+            <ul class="mt-3 space-y-3">
+                <li *ngFor="let item of timeline" class="rounded-xl ring-1 ring-black/10 bg-white p-4">
+                    <div class="text-sm text-gray-500">{{ item.year }}</div>
+                    <div class="font-medium">{{ item.title }}</div>
+                    <p class="text-[15px] text-gray-700 mt-1">{{ item.desc }}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- VALUES -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10">
+    <div class="grid md:grid-cols-3 gap-6">
+        <article class="rounded-xl ring-1 ring-black/10 bg-white p-5" revealDepth>
+            <h4 class="text-lg font-medium">Clarity over clever</h4>
+            <p class="mt-1 text-gray-700">If users hesitate, we redesign. Words and layout do the heavy lifting.</p>
+        </article>
+        <article class="rounded-xl ring-1 ring-black/10 bg-white p-5" revealDepth [revealDelay]="80">
+            <h4 class="text-lg font-medium">One routine</h4>
+            <p class="mt-1 text-gray-700">Make the important thing obvious and repeatable each week.</p>
+        </article>
+        <article class="rounded-xl ring-1 ring-black/10 bg-white p-5" revealDepth [revealDelay]="140">
+            <h4 class="text-lg font-medium">Ship, then sharpen</h4>
+            <p class="mt-1 text-gray-700">Deliver value early, iterate with real feedback and data.</p>
+        </article>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+    <div class="rounded-2xl bg-gradient-to-r from-accent to-accent2 text-white p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between"
+        revealDepth>
+        <div>
+            <h3 class="text-2xl md:text-3xl font-semibold">Let’s build something clear and useful</h3>
+            <p class="mt-1 text-white/90">Available for internships, junior roles, and freelance projects.</p>
+        </div>
+        <a href="mailto:dilyanmezev@gmail.com"
+            class="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white text-gray-900 hover:bg-white/90 transition">
+            Email me
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- OFF-DUTY (bottom section like the screenshot) -->
+<section class="bleed bg-[#1E3A8A] text-white">
+    <div class="mx-auto max-w-[1200px] px-6 md:px-10 py-12 md:py-16">
+        <h2 class="text-center text-2xl md:text-4xl font-semibold tracking-tight" revealDepth>
+            Where can you find me when I’m not working?
+        </h2>
+
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+            <figure *ngFor="let item of offDuty" class="rounded-xl overflow-hidden bg-white/5 ring-1 ring-white/20"
+                revealDepth>
+                <img [src]="item.src" [alt]="item.caption" class="w-full h-40 md:h-56 object-cover" loading="lazy">
+                <figcaption class="px-3 py-2 text-center text-sm text-white/90">{{ item.caption }}</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

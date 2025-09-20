@@ -1,0 +1,43 @@
+/* full-bleed helper (let section color span edge-to-edge) */
+.bleed {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+/* small section subtitle */
+.section-sub{
+  @apply text-[15px] font-semibold tracking-[0.2em] uppercase text-gray-800;
+}
+
+/* light “sticky note” feel (neutral, not pink) */
+.note{
+  background: #FEF9C3;            /* amber-100 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.132);
+}
+
+/* compact checklist */
+.checklist{
+  @apply space-y-2 text-gray-700 leading-[1.7];
+}
+.checklist li{
+  position: relative; padding-left: 1.25rem;
+}
+.checklist li::before{
+  content: ""; position: absolute; left: 0; top: .55rem;
+  width: .5rem; height: .5rem; border-radius: 9999px;
+  background: linear-gradient(90deg,#2563EB,#06B6D4);
+}
+
+/* idea cards */
+.idea-card{
+  @apply rounded-xl ring-1 ring-black/10 p-4 bg-white hover:shadow-md transition;
+}
+
+/* document links */
+.doc-link{
+  @apply underline underline-offset-2 hover:text-gray-800;
+}

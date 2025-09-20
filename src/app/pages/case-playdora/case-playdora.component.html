@@ -1,0 +1,415 @@
+<section #playdoraHero id="hero-playdora"
+  class="relative min-h-[calc(100dvh-80px)] mx-auto max-w-[1200px] px-6 md:px-10 py-8 lg:py-12">
+  <div class="grid md:grid-cols-12 h-full gap-10 lg:gap-16 items-center">
+    <div class="md:col-span-6" revealDepth>
+      <nav class="mb-4 text-sm">
+        <a routerLink="/" class="text-gray-500 hover:underline">Work</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Playdora</span>
+      </nav>
+
+      <p class="text-[15px] text-gray-500 mb-2">
+        <span class="gradient-text font-medium">Website</span> · 2023 · 4 months
+      </p>
+
+      <h1 class="text-4xl md:text-6xl font-medium leading-[1.08]">
+        Playdora — Ancient-Greek Toys
+      </h1>
+
+      <p class="mt-5 text-[18px] md:text-[20px] text-gray-700 leading-[1.7] max-w-[64ch]">
+        Interactive online store for Ancient-Greek toys — stories, AR, and collection progress
+        turn browsing into play.
+      </p>
+
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li class="pill">UX</li>
+        <li class="pill">UI</li>
+        <li class="pill">Prototype</li>
+        <li class="pill">JavaScript</li>
+        <li class="pill">Gamification</li>
+      </ul>
+
+      <p class="mt-6 text-sm text-gray-500">Role: Product Designer & Front-end</p>
+
+      <a href="#" (click)="scrollTo('discovery', $event)" class="hidden md:inline-flex mt-4 items-center gap-2 px-5 py-2.5
+                rounded-lg bg-gradient-to-r from-accent to-accent2 text-white
+                shadow-md hover:opacity-95 transition" aria-label="Start reading">
+        View case study
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+
+    <figure class="md:col-span-6 md:justify-self-end self-center" revealDepth [revealDelay]="120">
+      <div class="w-full max-w-[820px] max-h-[560px] md:max-h-[520px] lg:max-h-[560px] aspect-[16/10]">
+        <img src="assets/Playdora/Project1Img.png" alt="Playdora homepage mockup"
+          class="w-full h-full object-contain rounded-xl drop-shadow-xl" />
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section id="discovery" class="mx-auto max-w-[1080px] px-6 md:px-10">
+  <div class="bleed bg-[#1E3A8A] text-white">
+    <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-12">
+      <h2 class="text-center text-2xl md:text-4xl font-semibold tracking-tight" revealDepth>Introduction</h2>
+      <p class="mt-2 text-center text-white/80 text-sm md:text-[15px]" revealDepth [revealDelay]="80">What did I face?</p>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-12 gap-8 md:gap-10 items-start py-10 md:py-12">
+    <figure class="md:col-span-6" revealDepth>
+      <div class="note rounded-xl p-5 ring-1 ring-black/10 inline-block">
+        <blockquote class="text-[17px] leading-[1.6] text-gray-900">
+          “I prefer a minimalistic look. High-resolution visuals are a must.
+          I’m open to digital extras and simple 3D.”
+        </blockquote>
+        <figcaption class="mt-3 text-sm text-gray-500">— Fenia (founder)</figcaption>
+      </div>
+    </figure>
+
+    <div class="md:col-span-6 grid gap-6">
+      <div revealDepth>
+        <h3 class="section-sub">The users</h3><br>
+        <ul class="checklist">
+          <li>Adults buying meaningful, story-rich gifts.</li>
+          <li>Comfortable with standard e-commerce flows.</li>
+          <li>Value authenticity, craft, and provenance.</li>
+        </ul>
+      </div>
+
+      <div revealDepth [revealDelay]="80">
+        <h3 class="section-sub">The product</h3><br>
+        <ul class="checklist">
+          <li>~12 unique Ancient-Greek toy figures at launch.</li>
+          <li>“Playful + elegant” brand tone.</li>
+          <li>Owner story and artifact origins are key.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bleed bg-[#111827] text-white">
+    <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+      <h3 class="text-center text-2xl md:text-4xl font-medium leading-tight" revealDepth>
+        How might we make a playful, elegant online store<br class="hidden md:block" />
+        that feels like exploring Greek myths — not just “buying”?
+      </h3>
+      <p class="mt-2 text-center text-white/80 text-sm md:text-[15px]" revealDepth [revealDelay]="80">MAIN RESEARCH QUESTION
+      </p>
+    </div>
+  </div>
+
+  <!-- Sub-research questions -->
+  <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-14">
+    <div class="flex items-center gap-3 mb-3" revealDepth>
+      <span class="inline-block h-3 w-3 rotate-45 bg-[#1E3A8A] rounded-[2px]"></span>
+      <h4 class="text-lg md:text-xl font-semibold">Sub-research questions</h4>
+    </div>
+
+    <ul class="list-disc pl-6 space-y-2 text-[17px] md:text-[18px] text-gray-800" revealDepth [revealDelay]="80">
+      <li>Story vs shop: do users prefer a myth-led intro or direct product grid?</li>
+      <li>What interaction would lift confidence and conversion?</li>
+      <li>PDP essentials: what info must be visible to choose a figure/variant without hesitation?</li>
+      <li>Mobile performance: what asset/load limits keep AR/images smooth on 4G devices?</li>
+    </ul>
+  </div>
+
+  <div class="py-12 md:py-16">
+    <h3 class="section-sub text-center mb-8" revealDepth>Proposed directions</h3>
+
+    <div class="space-y-10">
+      <article revealDepth>
+        <div class="rounded-2xl overflow-hidden">
+          <img src="assets/Playdora/AR.png" alt="AR 360 view" class="h-[46vh] md:h-[62vh] object-cover">
+        </div>
+        <div class="mt-4 md:flex md:items-center md:justify-between gap-6">
+          <h4 class="text-2xl font-medium" revealDepth [revealDelay]="80">AR 360º</h4>
+          <p class="text-gray-600 md:max-w-[70ch]" revealDepth [revealDelay]="80">
+            Spin figures in 3D and place in-environment.
+          </p>
+        </div>
+      </article>
+
+      <article revealDepth [revealDelay]="80">
+        <div class="rounded-2xl overflow-hidden">
+          <img src="assets/Playdora/game.png" alt="Myth mini-game" class="h-[46vh] md:h-[62vh] object-cover">
+        </div>
+        <div class="mt-4 md:flex md:items-center md:justify-between gap-6">
+          <h4 class="text-2xl font-medium" revealDepth [revealDelay]="80">Simple game</h4>
+          <p class="text-gray-600 md:max-w-[70ch]" revealDepth [revealDelay]="80">
+            Mini-game; earn coins and unlock prices.
+          </p>
+        </div>
+      </article>
+
+      <article revealDepth [revealDelay]="140">
+        <div class="rounded-2xl overflow-hidden">
+          <img src="assets/Playdora/shop.png" alt="Color picker on PDP" class="h-[46vh] md:h-[62vh] object-cover">
+        </div>
+        <div class="mt-4 md:flex md:items-center md:justify-between gap-6">
+          <h4 class="text-2xl font-medium" revealDepth [revealDelay]="80">Color-picker shop</h4>
+          <p class="text-gray-600 md:max-w-[70ch]" revealDepth [revealDelay]="80">
+            Pick the color of your future toy, price in real-time.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <section class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-14">
+    <div class="h-0.5 bg-gradient-to-r from-accent to-accent2 rounded-full mb-6"></div>
+    <h3 class="text-center text-2xl md:text-3xl font-medium mb-8" revealDepth>
+      Why chose these for MVP?
+    </h3>
+
+    <div class="grid gap-6 md:gap-8 md:grid-cols-3">
+      <article class="rounded-xl ring-1 ring-black/10 bg-white p-5" revealDepth>
+        <h4 class="text-lg font-medium">AR 360º</h4>
+        <ul class="mt-2 text-gray-700 space-y-1">
+          <li>+ Highest “wow” & shareability.</li>
+          <li>+ Explains form/finish better than photos.</li>
+          <li>– Heavier assets on mobile if not optimized.</li>
+        </ul>
+      </article>
+
+      <article class="rounded-xl ring-1 ring-black/10 bg-white p-5" revealDepth [revealDelay]="80">
+        <h4 class="text-lg font-medium">Simple game</h4>
+        <ul class="mt-2 text-gray-700 space-y-1">
+          <li>+ Playful brand moment; coin unlocks.</li>
+          <li>+ Increases dwell time and recall.</li>
+          <li>– Non-essential to purchase flow.</li>
+        </ul>
+      </article>
+
+      <article class="rounded-xl ring-1 ring-black/10 bg-white p-5" revealDepth [revealDelay]="140">
+        <h4 class="text-lg font-medium">Color-picker shop</h4>
+        <ul class="mt-2 text-gray-700 space-y-1">
+          <li>+ Directly impacts conversion (clarity).</li>
+          <li>+ Reduces returns; sets expectations.</li>
+          <li>– Requires consistent photo set per variant.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <div class="py-12 md:py-16">
+    <h3 class="section-sub text-center mb-8" revealDepth>Artifacts</h3>
+
+    <div class="grid md:grid-cols-12 gap-6 md:gap-8">
+      <figure class="md:col-span-7" revealDepth>
+        <img src="assets/Playdora/toy.png" alt="Product photo"
+          class="w-full h-[18rem] md:h-[24rem] object-cover rounded-xl">
+        <figcaption class="mt-2 text-xs text-gray-500">Product photography — final lighting reference.</figcaption>
+      </figure>
+
+      <div class="md:col-span-5 space-y-6">
+        <figure class="rounded-xl overflow-hidden" revealDepth [revealDelay]="80">
+          <img src="assets/Playdora/PlaydoraLogo.png" alt="Playdora logo"
+            class="w-full h-[12rem] md:h-[14rem] object-contain">
+          <figcaption class="px-3 py-2 text-xs text-gray-500">Wordmark — calm, contemporary, Hellenic hint.</figcaption>
+        </figure>
+
+        <figure class="rounded-xl overflow-hidden" revealDepth [revealDelay]="140">
+          <a href="assets/docs/Project1/persona.pdf" target="_blank" rel="noopener" class="block">
+            <img src="assets/Playdora/personaImg.png" alt="Primary persona"
+              class="w-full h-[12rem] md:h-[14rem] object-contain">
+          </a>
+          <figcaption class="px-3 py-2 text-xs text-gray-500">Persona — tap to open PDF.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="design" class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+  <div class="bleed bg-[#1E3A8A] text-white">
+    <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-12">
+      <h2 class="text-center text-2xl md:text-4xl font-semibold tracking-tight" revealDepth>
+        Design
+      </h2>
+      <p class="mt-2 text-center text-white/80 text-sm md:text-[15px]" revealDepth [revealDelay]="80">
+        Low-fi → High-fi
+      </p>
+    </div>
+  </div>
+
+  <!-- ⬇️ added pt-10 md:pt-12 to create space under the blue band -->
+  <div class="pt-10 md:pt-12 mb-10">
+    <h3 class="section-sub mb-4" revealDepth>LOW-FIDELITY PROTOTYPE</h3>
+    <p class="text-gray-600 mb-6" revealDepth>
+      Fast flows to validate layout, content priority and navigation before visuals.
+    </p>
+
+    <!-- Low-fidelity wireframes -->
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Card -->
+      <figure class="rounded-xl overflow-hidden ring-1 ring-black/10 bg-white" revealDepth>
+        <a href="assets/Playdora/Low1.png" target="_blank" rel="noopener" class="block">
+          <div class="relative w-full h-[26rem] md:h-[32rem]">
+            <img src="assets/Playdora/Low1.png" alt="Low-fi: Home"
+              class="absolute inset-0 w-full h-full object-contain" />
+          </div>
+        </a>
+        <figcaption class="px-3 py-2 text-xs text-gray-500">
+          Home — hero, story hook, shop entry
+        </figcaption>
+      </figure>
+
+      <!-- Listing -->
+      <figure class="rounded-xl overflow-hidden ring-1 ring-black/10 bg-white" revealDepth>
+        <a href="assets/Playdora/Low2.png" target="_blank" rel="noopener" class="block">
+          <div class="relative w-full h-[26rem] md:h-[32rem]">
+            <img src="assets/Playdora/Low2.png" alt="Low-fi: Listing"
+              class="absolute inset-0 w-full h-full object-cover" />
+          </div>
+        </a>
+        <figcaption class="px-3 py-2 text-xs text-gray-500">
+          Shop — filter by color, choose amount
+        </figcaption>
+      </figure>
+
+      <!-- Product -->
+      <figure class="rounded-xl overflow-hidden ring-1 ring-black/10 bg-white" revealDepth>
+        <a href="assets/Playdora/Low3.png" target="_blank" rel="noopener" class="block">
+          <div class="relative w-full h-[26rem] md:h-[32rem]">
+            <img src="assets/Playdora/Low3.png" alt="Low-fi: Product"
+              class="absolute inset-0 w-full h-full object-cover" />
+          </div>
+        </a>
+        <figcaption class="px-3 py-2 text-xs text-gray-500">
+          PDP — 360/AR slot, color swatches
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ⬇️ small gap before High-fi -->
+  <div class="pt-6 md:pt-8">
+    <h3 class="section-sub mb-4" revealDepth>HIGH-FIDELITY PROTOTYPE</h3>
+    <p class="text-gray-600 mb-6" revealDepth>
+      Visual direction: calm typography, generous whitespace, playful accents inspired by Greek motifs.
+    </p>
+
+    <div class="grid gap-6 md:grid-cols-3" revealDepth>
+      <figure class="rounded-xl overflow-hidden ring-1 ring-black/10 bg-white">
+        <img src="assets/Playdora/Project1Img.png" alt="High-fi: Home"
+          class="w-full aspect-[4/3] md:aspect-[16/10] object-contain">
+        <figcaption class="px-3 py-2 text-xs text-gray-500">Home — story-led hero</figcaption>
+      </figure>
+
+      <figure class="rounded-xl overflow-hidden ring-1 ring-black/10 bg-white">
+        <img src="assets/Playdora/High2.png" alt="High-fi: Product"
+          class="w-full aspect-[4/3] md:aspect-[16/10] object-contain">
+        <figcaption class="px-3 py-2 text-xs text-gray-500">AR + 360 view</figcaption>
+      </figure>
+
+      <figure class="rounded-xl overflow-hidden ring-1 ring-black/10 bg-white">
+        <img src="assets/Playdora/High1.png" alt="High-fi: Mini-game"
+          class="w-full aspect-[4/3] md:aspect-[16/10] object-contain">
+        <figcaption class="px-3 py-2 text-xs text-gray-500">Myth mini-game — coins unlock</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =============== DELIVERY =============== -->
+<section id="delivery" class="mx-auto max-w-[1080px] px-6 md:px-10">
+  <div class="bleed bg-[#1E3A8A] text-white">
+    <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-12">
+      <h2 class="text-center text-2xl md:text-4xl font-semibold tracking-tight" revealDepth>
+        Delivery
+      </h2>
+      <p class="mt-2 text-center text-white/80 text-sm md:text-[15px]" revealDepth [revealDelay]="80">
+        Final deck & handoff
+      </p>
+    </div>
+  </div>
+
+  <div class="py-10 md:py-14">
+    <div class="rounded-xl ring-1 ring-black/10 bg-white p-5 md:p-6 flex items-center justify-between gap-4"
+      revealDepth>
+      <div>
+        <h3 class="text-lg font-medium">Final presentation (PDF)</h3>
+        <p class="text-gray-600 text-[15px] mt-1">
+          Summary of research, decisions, key screens, and next steps.
+        </p>
+      </div>
+      <a href="/assets/docs/Project1/Playdora_-_final.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg
+                bg-gradient-to-r from-accent to-accent2 text-white hover:opacity-95 transition">
+        View PDF
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =============== OUTCOME & LEARNINGS =============== -->
+<section id="outcome" class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+  <div class="grid md:grid-cols-12 gap-8 md:gap-10">
+    <div class="md:col-span-7" revealDepth>
+      <h3 class="section-sub mb-3">Outcome</h3>
+      <ul class="space-y-2 text-gray-700 leading-[1.7]">
+        <li>Clear, story-led shopping with playful touches (AR/Color picker) ready for MVP.</li>
+        <li>Consistent visuals and component system for fast iteration.</li>
+        <li>Lightweight animations that support, not distract from, decisions.</li>
+      </ul>
+
+      <!-- optional quick tech/a11y checklist -->
+      <div class="mt-6 rounded-xl ring-1 ring-black/10 bg-white p-4">
+        <p class="text-sm text-gray-600">
+          Handoff includes: component specs, color/typography tokens, and accessibility notes (contrast, focus,
+          keyboard).
+        </p>
+      </div>
+    </div>
+
+    <div class="md:col-span-5" revealDepth [revealDelay]="100">
+      <h3 class="section-sub mb-3">Learnings & next steps</h3>
+      <ul class="space-y-2 text-gray-700 leading-[1.7]">
+        <li>Show > tell works: large visuals drove clarity in reviews.</li>
+        <li>Variant clarity (color/finish) reduces uncertainty pre-cart.</li>
+      </ul>
+      <div class="mt-4">
+        <h4 class="text-sm font-semibold text-gray-800">Next</h4>
+        <ul class="mt-2 space-y-1 text-gray-700">
+          <li>• Validate PDP with 5 user tests (color picker & 360 slot).</li>
+          <li>• Add mini-game as post-purchase engagement.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== PROJECT NAV =============== -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 pb-16">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-4" revealDepth>
+    <!-- Back to all work (home) -->
+    <a routerLink="/"
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg ring-1 ring-black/10 bg-white hover:bg-white/90 transition">
+      ← Back to all work
+    </a>
+
+    <!-- Next case: Quiet.nl -->
+    <a routerLink="/work/quiet" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg
+              bg-gradient-to-r from-accent to-accent2 text-white hover:opacity-95 transition">
+      Next: Quiet.nl case
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<button *ngIf="showBackToTop" (click)="backToTop()" class="hidden md:inline-flex fixed bottom-6 right-6 z-50 px-4 py-2 rounded-lg
+               bg-white/90 ring-1 ring-black/10 shadow-md hover:bg-white transition" aria-label="Back to top">
+  Back to top
+</button>
+
+<app-footer></app-footer>

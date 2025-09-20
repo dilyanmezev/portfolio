@@ -1,0 +1,16 @@
+.nav-link {
+  color: #0F172A;
+  position: relative;
+  transition: color 500ms ease;
+}
+.nav-link.active { color: #2563EB; }
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -6px;
+  height: 2px; width: 0%;
+  background: linear-gradient(90deg, #2563EB, #06B6D4);
+  transition: width 500ms ease;
+}
+.nav-link.active::after { width: 100%; }

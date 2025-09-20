@@ -1,0 +1,488 @@
+<!-- HERO (fills viewport under navbar) -->
+<section #quietHero id="hero-quiet"
+    class="relative min-h-[calc(100dvh-80px)] mx-auto max-w-[1200px] px-6 md:px-10 py-8 lg:py-12">
+    <div class="grid md:grid-cols-12 h-full gap-10 lg:gap-16 items-center">
+        <!-- TEXT -->
+        <div class="md:col-span-6" revealDepth>
+            <nav class="mb-4 text-sm">
+                <a routerLink="/" class="text-gray-500 hover:underline">Work</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-800">Quiet.nl</span>
+            </nav>
+
+            <p class="text-[15px] text-gray-500 mb-2">
+                <span class="gradient-text font-medium">Mobile App</span> · 2024· 3 months
+            </p>
+
+            <h1 class="text-4xl md:text-6xl font-medium leading-[1.08]">
+                Quiet.nl — Community App Refresh
+            </h1>
+
+            <p class="mt-5 text-[18px] md:text-[20px] text-gray-700 leading-[1.7] max-w-[64ch]">
+                Community app redesign with clearer categories, calmer visuals, larger touch targets, and accessible
+                color/type.
+            </p>
+
+            <ul class="mt-5 flex flex-wrap gap-2">
+                <li class="pill">UX</li>
+                <li class="pill">UI</li>
+                <li class="pill">Prototype</li>
+                <li class="pill">SwiftUI</li>
+                <li class="pill">Usability</li>
+            </ul>
+
+            <p class="mt-6 text-sm text-gray-500">Role: Product Designer & Front-end</p>
+
+            <a href="#" (click)="scrollTo('intro', $event)" class="hidden md:inline-flex mt-4 items-center gap-2 px-5 py-2.5
+                rounded-lg bg-gradient-to-r from-accent to-accent2 text-white
+                shadow-md hover:opacity-95 transition" aria-label="Start reading">
+                View case study
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- IMAGE -->
+        <figure class="md:col-span-6 md:justify-self-end self-center" revealDepth [revealDelay]="120">
+            <div class="w-full max-w-[820px] max-h-[560px] md:max-h-[520px] lg:max-h-[560px] aspect-[16/10]">
+                <img src="assets/Quiet/homeAppMain.png" alt="Quiet app"
+                    class="w-full h-full object-contain rounded-xl drop-shadow-xl" />
+            </div>
+        </figure>
+    </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section id="intro" class="mx-auto max-w-[1080px] px-6 md:px-10">
+    <!-- Full-bleed blue band -->
+    <div class="bleed bg-[#1E3A8A] text-white">
+        <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-12">
+            <h2 class="text-center text-2xl md:text-4xl font-semibold tracking-tight" revealDepth>Introduction</h2>
+            <p class="mt-2 text-center text-white/80 text-sm md:text-[15px]" revealDepth [revealDelay]="80">What did I
+                face?
+            </p>
+        </div>
+    </div>
+
+    <!-- Quote + Users -->
+    <div class="py-10 md:py-14">
+        <div class="flex flex-col items-center">
+            <figure class="relative" revealDepth>
+                <div class="sticky-note max-w-[560px] p-7">
+                    <blockquote class="text-[18px] md:text-[20px] leading-[1.55] text-gray-900">
+                        “My phone is full of messages — I just want one place that tells me what to do next.”
+                    </blockquote>
+                    <figcaption class="mt-3 text-sm text-gray-700">— Quiet member, 34 (translated)</figcaption>
+                </div>
+            </figure>
+
+            <!-- Users -->
+            <div class="mt-10 max-w-[1080px]" revealDepth>
+                <h3 class="text-[30px] md:text-[42px] font-semibold leading-tight">The users</h3>
+                <p class="mt-2 text-[18px] md:text-[19px] text-gray-700 leading-[1.8]">
+                    Members (receivers), volunteers, sponsors, and donors with varied tech literacy and languages.
+                    They need a calm, accessible app that surfaces the next action, centralizes “geluksmomentjes”
+                    vouchers/tickets, and keeps everyone in sync without message overload.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCT (2-col with illustration) -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10">
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7" revealDepth>
+            <h2 class="text-[30px] md:text-[42px] font-semibold leading-tight">The product</h2>
+
+            <p class="mt-4 text-[18px] md:text-[19px] text-gray-700 leading-[1.85]">
+                <strong>Quiet</strong> is a community app for <em>members, volunteers, sponsors, and donors</em>.
+                It centralizes “geluksmomentjes” (vouchers/tickets), events, and messages into one calm place.
+                Role-based dashboards surface the <em>next action</em>, multilingual support lowers barriers, and
+                simple notifications keep everyone aligned without chat overload.
+            </p>
+
+            <p class="mt-3 text-[18px] md:text-[19px] text-gray-700 leading-[1.85]">
+                <strong>Priorities:</strong> clear roles & permissions, resource distribution tracking, donation
+                transparency,
+                and privacy by design.
+            </p>
+        </div>
+
+        <figure class="md:col-span-5 md:pl-6 md:self-center" revealDepth [revealDelay]="120">
+            <img src="assets/Quiet/Project2Img.png" alt="Product concept illustration"
+                class="w-full max-w-[520px] md:max-w-[560px] mx-auto object-contain select-none" />
+        </figure>
+    </div>
+</section>
+
+<!-- BUSINESS GOAL (2-col, consistent heading + alignment) -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 mt-14 md:mt-16">
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7" revealDepth>
+            <h2 class="text-[30px] md:text-[42px] font-semibold leading-tight">The business goal</h2>
+            <p class="mt-4 text-[18px] md:text-[19px] text-gray-700 leading-[1.85]">
+                Increase <strong>activation</strong> and reduce coordination overhead by making Quiet the
+                <strong> single, reliable place</strong> for tasks, events, and “geluksmomentjes” —
+                integrated into weekly routines for members and volunteers.
+            </p>
+        </div>
+
+        <figure class="md:col-span-5 md:pl-6 md:self-center" revealDepth [revealDelay]="120">
+            <img src="assets/Quiet/Goal-rafiki.png" alt="Goal illustration"
+                class="w-full max-w-[520px] md:max-w-[560px] mx-auto object-contain select-none" />
+        </figure>
+    </div>
+</section>
+
+<!-- HMW -->
+<section id="hmw" class="mt-14 md:mt-16">
+    <!-- Full-bleed blue band -->
+    <div class="bleed bg-[#111827] text-white">
+        <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+            <h3 class="text-center text-2xl md:text-[40px] font-semibold leading-tight" revealDepth>
+                How to turn scattered chats and files into one calm, reliable routine for "Quiet"?
+            </h3>
+            <p class="mt-2 text-center text-white/80 text-sm md:text-[15px]" revealDepth [revealDelay]="80">MAIN
+                RESEARCH QUESTION
+            </p>
+        </div>
+    </div>
+
+    <!-- =================== SUB-RESEARCH QUESTIONS =================== -->
+    <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+        <div class="flex items-center gap-3 mb-6" revealDepth>
+            <span class="inline-block h-5 w-5 rotate-45 bg-[#1E3A8A] rounded-[3px]"></span>
+            <h2 class="text-3xl md:text-4xl font-semibold">Sub-research questions</h2>
+        </div>
+
+        <ul class="list-disc pl-6 space-y-2 text-[17px] md:text-[18px] text-gray-800" revealDepth [revealDelay]="80">
+            <li>How do members/volunteers use WhatsApp/SMS/email today—and where do flows break?</li>
+            <li>What single <strong>next action</strong> should each role see first?</li>
+            <li>Where does the <strong>voucher lifecycle</strong> (create→allocate→notify→redeem→confirm) fail most?
+            </li>
+            <li>What <strong>Organizer</strong> tools are the weekly minimum for sponsors/volunteers?</li>
+            <li>What <strong>notification</strong> rules keep people engaged without noise?</li>
+        </ul>
+    </div>
+</section>
+
+<!-- =================== PROPOSED SOLUTION =================== -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+    <!-- Title with small diamond -->
+    <div class="flex items-center gap-3 mb-6" revealDepth>
+        <span class="inline-block h-5 w-5 rotate-45 bg-yellow-400 rounded-[3px]"></span>
+        <h2 class="text-3xl md:text-4xl font-semibold">The proposed solution</h2>
+    </div>
+
+    <!-- Lead paragraph -->
+    <p class="text-[18px] md:text-[19px] leading-[1.8] text-gray-800" revealDepth>
+        <strong>To decide on the right direction, I surveyed members and volunteers on which concept they found most
+            valuable for their daily routines.</strong><br>
+        - Members wanted a simple, inclusive app for engagement and navigation.<br>
+        - Sponsors/Volunteers needed a structured tool to manage and distribute resources.<br>
+    </p>
+
+    <!-- Concepts (1:1 layout with reference) -->
+    <div class="mt-10 space-y-16">
+        <!-- Idea 1 -->
+        <article class="grid md:grid-cols-12 items-start gap-8">
+            <!-- Left: text -->
+            <div class="md:col-span-7" revealDepth>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="inline-block h-3 w-3 rotate-45 bg-yellow-400 rounded-[2px]"></span>
+                    <h3 class="text-xl md:text-2xl font-semibold">Concept 1: The Community Connector App</h3>
+                </div>
+
+                <div class="mt-4">
+                    <p class="text-[17px] md:text-[18px] leading-[1.8] text-gray-800">
+                        This app serves as a centralized digital hub for community engagement and support, designed to
+                        enhance interactions between members, sponsors, and volunteers. It's envisioned as a multi-
+                        functional platform that integrates aspects of social networking, event management, and resource
+                        sharing tailored to a community-oriented environment. The app should be highly interactive,
+                        user-
+                        friendly, and supportive of inclusivity, fostering a vibrant community spirit.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: mockup -->
+            <figure class="md:col-span-5 md:pl-6" revealDepth [revealDelay]="100">
+                <img src="assets/Quiet/Concept1.png" alt="Home screen with page indicator dots"
+                    class="w-full max-w-[420px] mx-auto object-contain select-none">
+                <figcaption class="mt-3 text-center text-sm text-gray-500">
+                    Engagement, events, and resource sharing.
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Idea 2 -->
+        <article class="grid md:grid-cols-12 items-start gap-8">
+            <div class="md:col-span-7" revealDepth>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="inline-block h-3 w-3 rotate-45 bg-yellow-400 rounded-[2px]"></span>
+                    <h3 class="text-xl md:text-2xl font-semibold">Concept 2: The Quiet Navigator App</h3>
+                </div>
+
+                <div class="mt-4">
+                    <p class="text-[17px] md:text-[18px] leading-[1.8] text-gray-800">
+                        The Quiet Navigator App is designed as a logistics and operations tool primarily focused on
+                        eﬃciently managing the distribution and tracking of "geluksmomentjes." It combines the ease of
+                        use seen in consumer apps like Uber Eats with the functional depth of business management
+                        tools, tailored to meet the specific needs of Quiet’s operational dynamics.
+                    </p>
+                </div>
+            </div>
+
+            <figure class="md:col-span-5 md:pl-6" revealDepth [revealDelay]="100">
+                <img src="assets/Quiet/Concept2.png" alt="Home screen with renamed, secondary action"
+                    class="w-full max-w-[420px] mx-auto object-contain select-none">
+                <figcaption class="mt-3 text-center text-sm text-gray-500">
+                    Managing and distributing "geluksmomentjes".
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Idea 3 -->
+        <article class="grid md:grid-cols-12 items-start gap-8">
+            <div class="md:col-span-7" revealDepth>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="inline-block h-3 w-3 rotate-45 bg-yellow-400 rounded-[2px]"></span>
+                    <h3 class="text-xl md:text-2xl font-semibold">Concept 3: The Quiet Impact Tracker App</h3>
+                </div>
+
+                <div class="mt-4">
+                    <p class="text-[17px] md:text-[18px] leading-[1.8] text-gray-800">
+                        The Quiet Impact Tracker App is focused on visualizing and managing the impact of community
+                        activities, donations, and "geluksmomentjes." This app is primarily designed as a tool for
+                        tracking
+                        and reporting the eﬀects of various initiatives within the Quiet community. It serves as a
+                        bridge
+                        between members, sponsors, and volunteers, providing real-time data on the contributions and
+                        outcomes of the community's eﬀorts, tailored to enhance transparency and encourage more
+                        active participation.
+                    </p>
+                </div>
+            </div>
+
+            <figure class="md:col-span-5 md:pl-6" revealDepth [revealDelay]="100">
+                <img src="assets/Quiet/Concept3.png" alt="Role-based home with next action banner"
+                    class="w-full max-w-[420px] mx-auto object-contain select-none">
+                <figcaption class="mt-3 text-center text-sm text-gray-500">
+                    Impact, donations, and outcomes.
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Idea 4 -->
+        <article class="grid md:grid-cols-12 items-start gap-8">
+            <div class="md:col-span-7" revealDepth>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="inline-block h-5 w-5 rotate-45 bg-yellow-400 rounded-[3px]"></span>
+                    <h3 class="text-xl md:text-2xl font-semibold">Concept 4: The Quiet Organizer App</h3>
+                </div>
+
+                <div class="mt-4">
+                    <p class="text-[17px] md:text-[18px] leading-[1.8] text-gray-800">
+                        The Quiet Organizer App is designed to empower sponsors and volunteers with tools to eﬃciently
+                        manage and oversee community events and resources. This app serves as a central hub for
+                        organizing, scheduling, and tracking, ensuring optimal allocation and usage of resources and
+                        facilitating smooth event executions.
+                    </p>
+                </div>
+            </div>
+
+            <figure class="md:col-span-5 md:pl-6" revealDepth [revealDelay]="100">
+                <img src="assets/Quiet/Concept4.png" alt="Role-based home with next action banner"
+                    class="w-full max-w-[420px] mx-auto object-contain select-none">
+                <figcaption class="mt-3 text-center text-sm text-gray-500">
+                    Organizing, scheduling, and tracking.
+                </figcaption>
+            </figure>
+        </article>
+    </div>
+</section>
+
+<!-- =================== FINAL DIRECTION =================== -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+    <!-- Title with small diamond -->
+    <div class="flex items-center gap-3 mb-6" revealDepth>
+        <span class="inline-block h-5 w-5 rotate-45 bg-yellow-400 rounded-[3px]"></span>
+        <h2 class="text-3xl md:text-4xl font-semibold">What was chosen — and why?</h2>
+    </div>
+
+    <!-- Lead paragraph -->
+    <p class="text-[18px] md:text-[19px] leading-[1.8] text-gray-800" revealDepth>
+        Feedback from interviews and the concept survey made two needs stand out: members wanted a calm place to find
+        <em>what to do next</em>, while sponsors/volunteers needed structure to allocate and track resources.
+        I therefore committed to a <strong>two-app approach</strong> that works as one system:
+        <em>Community Connector</em> for members and <em>Organizer</em> for sponsors/volunteers.
+    </p>
+
+    <!-- Decision bullets -->
+    <ul class="list-disc pl-6 space-y-2 text-[17px] md:text-[18px] text-gray-800 mt-5" revealDepth [revealDelay]="80">
+        <li><strong>Reduce noise, increase trust:</strong> clear “next action” for members; auditable flows for
+            volunteers/sponsors.</li>
+        <li><strong>Meet people where they are:</strong> keep WhatsApp/SMS hand-offs, but store decisions and vouchers
+            in Quiet.</li>
+        <li><strong>Privacy by design:</strong> role-based access, minimal data exposure between apps.</li>
+        <li><strong>Operational wins first:</strong> start with the flows that unblock weekly routines, then add impact
+            reporting.</li>
+    </ul>
+
+    <!-- Two-column summary -->
+    <div class="grid md:grid-cols-12 gap-8 mt-10 items-start">
+        <!-- Members app -->
+        <article class="md:col-span-6" revealDepth>
+            <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block h-3 w-3 rotate-45 bg-[#1E3A8A] rounded-[2px]"></span>
+                <h3 class="text-xl md:text-2xl font-semibold">Members app — Community Connector (Concept 1)</h3>
+            </div>
+            <ul class="list-disc pl-6 space-y-2 text-[17px] md:text-[18px] text-gray-800">
+                <li>Role-based home with a <strong>“Next action”</strong> banner.</li>
+                <li>Central feed: events, vouchers (*geluksmomentjes*), messages.</li>
+                <li>Simple, respectful notifications; multilingual support.</li>
+                <li><em>MVP scope:</em> onboarding, interests, voucher wallet, event browse.</li>
+            </ul>
+        </article>
+
+        <!-- Sponsors/Volunteers app -->
+        <article class="md:col-span-6" revealDepth [revealDelay]="120">
+            <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block h-3 w-3 rotate-45 bg-[#1E3A8A] rounded-[2px]"></span>
+                <h3 class="text-xl md:text-2xl font-semibold">Sponsors & Volunteers app — Organizer (Concept 4)</h3>
+            </div>
+            <ul class="list-disc pl-6 space-y-2 text-[17px] md:text-[18px] text-gray-800">
+                <li>Plan and allocate resources; create/assign <strong>geluksmomentjes</strong>.</li>
+                <li>Track distributions and attendance; lightweight scheduling.</li>
+                <li>Exportable logs for accountability and donor reporting.</li>
+                <li><em>MVP scope:</em> create voucher/event, assign to member, mark as fulfilled.</li>
+            </ul>
+        </article>
+    </div>
+
+    <div class="mt-10" revealDepth>
+        <div class="flex items-center gap-3 mb-2">
+            <span class="inline-block h-3 w-3 rotate-45 bg-yellow-400 rounded-[2px]"></span>
+            <h4 class="text-lg md:text-xl font-semibold">What I deferred (next phase)</h4>
+        </div>
+        <p class="text-[17px] md:text-[18px] leading-[1.8] text-gray-800">
+            Impact dashboards and public transparency features from <em>Impact Tracker (Concept 3)</em>, and
+            member-to-member
+            social features from <em>Navigator/Connector crossovers</em>, to keep the MVP focused on routine
+            reliability.
+        </p>
+    </div>
+</section>
+
+<!-- DESIGN BAND -->
+<div class="bleed bg-[#1E3A8A] text-white">
+    <div class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-12">
+        <h2 class="text-center text-2xl md:text-4xl font-semibold tracking-tight" revealDepth>
+            Design
+        </h2>
+        <p class="mt-2 text-center text-white/80 text-sm md:text-[15px]" revealDepth [revealDelay]="80">
+            Low-fi → High-fi
+        </p>
+    </div>
+</div>
+
+<!-- =================== Low-FI =================== -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 py-10 md:py-14">
+    <h3 class="text-2xl md:text-3xl font-semibold" revealDepth>LOW-FIDELITY PROTOTYPE</h3>
+    <p class="mt-2 text-[18px] md:text-[19px] text-gray-700 leading-[1.8]" revealDepth>
+        Early hand-drawn wireframes exploring the app’s core structure.</p>
+
+    <ul class="mt-4 space-y-2 text-[17px] md:text-[18px] text-gray-800 list-disc pl-5" revealDepth [revealDelay]="80">
+        <li>Home feed with upcoming and suggested events</li>
+        <li>Discover page with map integration for activities</li>
+        <li>Community lists for easy group navigation</li>
+        <li>Profile view with user details and content</li>
+    </ul>
+
+    <!-- Single wide low-fi image -->
+    <figure class="mt-10" revealDepth>
+        <img src="assets/Quiet/Low-Fi.png" alt="Low-fi flow overview" class="w-full h-auto object-contain mx-auto">
+    </figure>
+
+    <p class="mt-4 text-center text-sm text-gray-500" revealDepth>
+        Low-fidelity overview
+    </p>
+</section>
+
+<!-- =================== FLOWS CAROUSEL (wide PNGs) =================== -->
+<section id="flows" class="mx-auto max-w-[1080px] px-6 md:px-10 py-12 md:py-16">
+    <h3 class="text-2xl md:text-3xl font-semibold" revealDepth>
+        HIGH-FIDELITY PROTOTYPE
+    </h3>
+    <p class="mt-2 text-[18px] md:text-[19px] text-gray-700 leading-[1.8]" revealDepth>
+        Highlight of selected screens from the Figma prototype.
+    </p>
+
+    <!-- Main slide -->
+    <figure class="relative mt-8 select-none" revealDepth [revealDelay]="80" (pointerdown)="onSwipeStart($event)"
+        (pointerup)="onSwipeEnd($event)">
+        <img [src]="carouselImages[currentSlide]" [alt]="'Concept ' + (currentSlide + 1)" class="mx-auto h-auto object-contain
+       w-[92%] sm:w-[88%] md:w-[80%] lg:w-[72%] xl:w-[64%]
+       max-h-[72vh]" />
+
+        <!-- Prev -->
+        <button type="button" (click)="prevSlide()" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3
+                     rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white
+                     hidden sm:inline-flex" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Next -->
+        <button type="button" (click)="nextSlide()" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3
+                     rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white
+                     hidden sm:inline-flex" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </figure>
+
+    <!-- Thumbnails -->
+    <div class="mt-6 flex flex-wrap justify-center gap-3 md:gap-4" revealDepth [revealDelay]="120">
+        <button *ngFor="let img of carouselImages; let i = index" type="button" (click)="goToSlide(i)"
+            class="rounded-lg overflow-hidden ring-1 ring-black/10 hover:ring-black/20 transition focus:outline-none"
+            [ngClass]="i === currentSlide ? 'ring-2 ring-[#1E3A8A]' : ''" [attr.aria-label]="'Go to slide ' + (i + 1)">
+            <img [src]="img" [alt]="'Thumbnail ' + (i + 1)"
+                class="h-14 md:h-16 w-auto object-contain opacity-80 hover:opacity-100 transition" />
+        </button>
+    </div><br>
+</section>
+
+<!-- =============== PROJECT NAV =============== -->
+<section class="mx-auto max-w-[1080px] px-6 md:px-10 pb-16">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4" revealDepth>
+        <!-- Back to all work (home) -->
+        <a routerLink="/"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg ring-1 ring-black/10 bg-white hover:bg-white/90 transition">
+            ← Back to all work
+        </a>
+
+        <!-- <a routerLink="/work/quiet" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg
+                bg-gradient-to-r from-accent to-accent2 text-white hover:opacity-95 transition">
+            Next: Quiet.nl case
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>-->
+    </div>
+</section>
+
+<button *ngIf="showBackToTop" (click)="backToTop()" class="hidden md:inline-flex fixed bottom-6 right-6 z-50 px-4 py-2 rounded-lg
+               bg-white/90 ring-1 ring-black/10 shadow-md hover:bg-white transition" aria-label="Back to top">
+    Back to top
+</button>
+
+<app-footer></app-footer>

@@ -1,0 +1,72 @@
+<header class="bg-white">
+  <div class="mx-auto max-w-[1200px] px-6 md:px-10 pt-8">
+    <div class="h-20 flex items-center justify-between
+             opacity-0 -translate-y-12 transition-all duration-[1200ms] ease-out" [class.opacity-100]="loaded"
+      [class.translate-y-0]="loaded">
+      <!-- Logo -->
+      <a routerLink="/" class="inline-flex items-center">
+        <img src="assets/Logo.png" alt="Dido logo" class="h-10 w-auto select-none" />
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-12 uppercase tracking-wider text-sm font-medium">
+        <a class="nav-link" routerLink="/about" [class.active]="isMarked(1)" (mouseenter)="onEnter(1)"
+          (mouseleave)="onLeave()">About</a>
+        <a class="nav-link" routerLink="/" [class.active]="isMarked(0)" (mouseenter)="onEnter(0)"
+          (mouseleave)="onLeave()">Work</a>
+        <a class="nav-link" href="assets/docs/CV/Resume.pdf" target="_blank" rel="noopener" [class.active]="isMarked(2)"
+          (mouseenter)="onEnter(2)" (mouseleave)="onLeave()">Resume</a>
+      </nav>
+
+      <!-- Burger (mobile) -->
+      <button
+        class="md:hidden inline-flex items-center justify-center rounded-md p-2 ring-1 ring-black/10 hover:bg-black/5 transition"
+        (click)="toggleMobile()" [attr.aria-expanded]="mobileOpen" aria-label="Menu">
+        <!-- burger -->
+        <svg *ngIf="!mobileOpen" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <!-- X -->
+        <svg *ngIf="mobileOpen" width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- FULL-SCREEN MOBILE MENU -->
+  <div class="md:hidden fixed inset-0 z-[70] bg-white
+           opacity-0 pointer-events-none
+           transition-opacity duration-300 ease-out" [class.opacity-100]="mobileOpen"
+    [class.pointer-events-auto]="mobileOpen">
+    <!-- Top bar inside the overlay -->
+    <div class="absolute inset-x-0 top-0 h-20 flex items-center justify-between px-6">
+      <a routerLink="/" (click)="closeMobile()" class="inline-flex items-center">
+        <img src="assets/Logo.png" alt="Dido logo" class="h-8 w-auto select-none" />
+      </a>
+      <button class="p-2" aria-label="Close menu" (click)="closeMobile()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Centered links -->
+    <nav class="h-full grid place-content-center text-center gap-8">
+      <a routerLink="/about" (click)="closeMobile()" class="text-3xl tracking-wider"
+        [ngClass]="{ 'text-gray-900 font-semibold': isMarked(1), 'text-gray-400': !isMarked(1) }">
+        About
+      </a>
+
+      <a routerLink="/" (click)="closeMobile()" class="text-3xl tracking-wider"
+        [ngClass]="{ 'text-gray-900 font-semibold': isMarked(0), 'text-gray-400': !isMarked(0) }">
+        Work
+      </a>
+
+      <a href="/resume.pdf" target="_blank" rel="noopener" (click)="closeMobile()"
+        class="text-3xl tracking-wider text-gray-400 hover:text-gray-900 transition">
+        Resume
+      </a>
+    </nav>
+  </div>
+</header>

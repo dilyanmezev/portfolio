@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Calibre, ui-sans-serif, system-ui, "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+:root {
+  color: #111318;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent;
+}
+
+.gradient-link {
+  @apply gradient-text font-medium underline-offset-2 hover:underline;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("/assets/fonts/Calibre/Calibre-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("/assets/fonts/Calibre/Calibre-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.pill { @apply px-3 py-1 rounded-full text-sm ring-1 ring-black/10 bg-white hover:bg-white/90 transition; }
