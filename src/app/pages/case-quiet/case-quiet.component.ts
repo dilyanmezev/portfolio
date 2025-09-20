@@ -67,11 +67,11 @@ export class CaseQuietComponent implements AfterViewInit {
 
   // ---- Carousel (wide PNGs)
   carouselImages: string[] = [
-    './/src/assets/Quiet/Project2Img.png',
-    './/src/assets/Quiet/Onboarding.png',
-    './/src/assets/Quiet/AI.png',
-    './/src/assets/Quiet/Donate.png',
-    './/src/assets/Quiet/Map.png',
+    'assets/Quiet/Project2Img.png',
+    'assets/Quiet/Onboarding.png',
+    'assets/Quiet/AI.png',
+    'assets/Quiet/Donate.png',
+    'assets/Quiet/Map.png',
   ];
   currentSlide = 0;
 
